@@ -7,8 +7,6 @@ ORGANISATIES <- read.csv(unz(tmp, zip::zip_list(tmp)[which(startsWith(zip::zip_l
 }
 
 #' Haalt e-mailadressen uit actieve organisaties
-#' @import dplyr
-#' @import magrittr
 extract_email <- function(){
   mailadressen <- basisgegevens_instellingen()%>%
     filter(CODE_STAND_RECORD=="A") %>% #Actuele organisaties
